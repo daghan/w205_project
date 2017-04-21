@@ -10,6 +10,5 @@
 
 2- Then go to ../cleanup_and_transformations and run: ./clean_and_transform.sh
 
-3- Launch spark-sql  
-
-4- Explore the tables with the command: show tables;  
+3- Launch spark-sql (or hive) to inspect the final table:
+select * from merged_storm_econ_data;
