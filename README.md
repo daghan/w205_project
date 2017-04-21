@@ -6,16 +6,10 @@
 - spark
 
 ## To get started  
-1- Go to loading_and_modeling directory and run: load_data_lake.sh  
+1- Go to loading_and_modeling directory and run: ./load_data_lake.sh  
 
-2- Then run: hive -f hive_base_ddl.sql  
+2- Then go to ../cleanup_and_transformations and run: ./clean_and_transform.sh
 
-3- Then go to ../cleanup_and_transformations and run: hive -f ./transform_tables.sql  
+3- Launch spark-sql  
 
-4- Launch spark-sql  
-
-5- Explore the tables with the command: show tables;  
-
-6- Final parquet table for the cleaned up 2016 weather data is storms_2016_clean_parquet. Run the following command to inspect the fields: describe storms_2016_clean_parquet;  
-
-7- Get a few lines as a sample data to inspect the table:  select \* from storms\_2016\_clean\_parquet limit 5;
+4- Explore the tables with the command: show tables;  
