@@ -10,5 +10,8 @@
 
 2- Then go to ../cleanup_and_transformations and run: ./clean_and_transform.sh
 
-3- Launch spark-sql (or hive) to inspect the final table:
-select * from merged_storm_econ_data;
+3- Then go to ../investigations and run: ./investigate.sh
+
+4- Finally you can inspect the results (png file) at visualizations directory or
+connect to the public tableau server at:  
+https://public.tableau.com/profile/daghan.altas#!/vizhome/shared/ZZ57K43FD
