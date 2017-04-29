@@ -1,9 +1,13 @@
 # README
 
 ## Requirements:
+To fully run this project, you need
+
 - HDFS
 - hive
-- spark
+- spark (and pyspark)
+- jupyter
+- tableau
 
 ## To get started  
 1- Go to loading_and_modeling directory and run: ./load_data_lake.sh  
