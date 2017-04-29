@@ -49,16 +49,17 @@ do
         curl -o ./$YEAR_FILE $f
         unzip ./$YEAR_FILE
         rm -rf ./$YEAR_FILE
+        grep "Private" ./$YEAR.q1-q*.by_area/*Statewide.csv | grep "Total, all industries" > ./$YEAR.all_states.csv
+
       else
         echo "Data dir $CSV_FILE exists, not downloading";
       fi
       ### Scan every statewide csv file
       ### but only get the private  sector & "Total, all industries" data
       ### q1-q* and not q1-q4 because 2016 has 3 quarters
-      grep "Private" ./$YEAR.q1-q*.by_area/*Statewide.csv | grep "Total, all industries" > ./$YEAR.all_states.csv
-      hdfs dfs -rm -r /w205/data/final_project/$YEAR/all_states_$YEAR
-      hdfs dfs -mkdir -p /w205/data/final_project/$YEAR/all_states_$YEAR
-      hdfs dfs -put ./$YEAR.all_states.csv /w205/data/final_project/$YEAR/all_states_$YEAR/all_states_$YEAR.csv
+      hdfs dfs -rm -r /user/w205/data/final_project/$YEAR/all_states_$YEAR
+      hdfs dfs -mkdir -p /user/w205/data/final_project/$YEAR/all_states_$YEAR
+      hdfs dfs -put ./$YEAR.all_states.csv /user/w205/data/final_project/$YEAR/all_states_$YEAR/all_states_$YEAR.csv
   else
     echo "Error in matching $f"
   fi
