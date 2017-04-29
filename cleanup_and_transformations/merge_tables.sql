@@ -27,33 +27,35 @@
 -- ) tmp;
 
 
-DROP TABLE storms_alltime_clean_aggregate;
-CREATE TABLE storms_alltime_clean_aggregate AS
-SELECT * FROM (
-    SELECT * FROM storms_2006_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2007_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2008_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2009_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2010_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2011_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2012_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2013_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2013_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2014_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2015_clean_aggregate
-    UNION ALL
-    SELECT * FROM storms_2016_clean_aggregate
-) tmp;
+-- DROP TABLE storms_alltime_clean_aggregate;
+-- CREATE TABLE storms_alltime_clean_aggregate AS
+-- SELECT * FROM (
+--     SELECT * FROM storms_2006_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2007_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2008_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2009_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2010_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2011_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2012_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2013_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2013_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2014_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2015_clean_aggregate
+--     UNION ALL
+--     SELECT * FROM storms_2016_clean_aggregate
+-- ) tmp;
+
+
 
 DROP TABLE states_alltime_clean_aggregate;
 CREATE TABLE states_alltime_clean_aggregate AS
