@@ -27,28 +27,28 @@ do
   if [[ $f =~ d(20[0-9][0-9]) ]]; then
     year=${BASH_REMATCH[1]}
     csv="storms_"$year".csv"
+    f2=storms_$year.csv
     if [ ! -f "./$csv" ]; then
       echo "Downloading weather data file $f";
       FULL_URL=$BASE_URL$f.gz
       curl -O $FULL_URL
       gzip -d $f.gz
+      tail -n +2 $f > $f2
     else
       echo "Data file $csv exists, not downloading";
     fi
 
 
-    f2=storms_$year.csv
-    tail -n +2 $f > $f2
-    hdfs dfs -rm -r /w205/data/final_project/$year/storms_$year/
-    hdfs dfs -mkdir -p /w205/data/final_project/$year/storms_$year/
-    hdfs dfs -put $f2 /w205/data/final_project/$year/storms_$year/
+    hdfs dfs -rm -r /user/w205/data/final_project/$year/storms_$year/
+    hdfs dfs -mkdir -p /user/w205/data/final_project/$year/storms_$year/
+    hdfs dfs -put $f2 /user/w205/data/final_project/$year/storms_$year/
   else
       echo "Error in matching $f"
   fi
 done
 
 echo "List of HDFS files"
-hdfs dfs -ls -R /w205/data/final_project
+hdfs dfs -ls -R /user/w205/data/final_project
 
 
 
