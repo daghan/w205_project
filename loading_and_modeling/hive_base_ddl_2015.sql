@@ -62,7 +62,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS storms_2015
     "escapeChar" = '\\'
 )
   STORED AS TEXTFILE
-  LOCATION '/w205/data/final_project/2015/storms_2015';
+  LOCATION '/user/w205/data/final_project/2015/storms_2015';
 
 DROP TABLE all_states_2015;
 CREATE EXTERNAL TABLE IF NOT EXISTS all_states_2015
@@ -124,7 +124,7 @@ WITH SERDEPROPERTIES
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/w205/data/final_project/2015/all_states_2015';
+LOCATION '/user/w205/data/final_project/2015/all_states_2015';
 
 select * from storms_2015 limit 5;
 select * from all_states_2015 limit 5;
