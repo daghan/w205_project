@@ -1,4 +1,26 @@
 #!/bin/bash
+
+echo "hive -f transform_tables_2006.sql"
+hive -f transform_tables_2006.sql
+
+echo "hive -f transform_tables_2007.sql"
+hive -f transform_tables_2007.sql
+
+echo "hive -f transform_tables_2008.sql"
+hive -f transform_tables_2008.sql
+
+echo "hive -f transform_tables_2009.sql"
+hive -f transform_tables_2009.sql
+
+echo "hive -f transform_tables_2010.sql"
+hive -f transform_tables_2010.sql
+
+echo "hive -f transform_tables_2011.sql"
+hive -f transform_tables_2011.sql
+
+echo "hive -f transform_tables_2012.sql"
+hive -f transform_tables_2012.sql
+
 echo "hive -f transform_tables_2013.sql"
 hive -f transform_tables_2013.sql
 
