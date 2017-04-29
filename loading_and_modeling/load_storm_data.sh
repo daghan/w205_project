@@ -24,16 +24,19 @@ StormEvents_details-ftp_v1.0_d2016_c20170317.csv"
 BASE_URL="https://www1.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/"
 for f in $FILES
 do
-  if [ ! -f "./$f" ]; then
-    echo "Downloading weather data file $f";
-    FULL_URL=$BASE_URL$f.gz
-    curl -O $FULL_URL
-    gzip -d $f.gz
-  else
-    echo "Data file $f exists, not downloading";
-  fi
   if [[ $f =~ d(20[0-9][0-9]) ]]; then
     year=${BASH_REMATCH[1]}
+    csv="storms_"$year".csv"
+    if [ ! -f "./$csv" ]; then
+      echo "Downloading weather data file $f";
+      FULL_URL=$BASE_URL$f.gz
+      curl -O $FULL_URL
+      gzip -d $f.gz
+    else
+      echo "Data file $csv exists, not downloading";
+    fi
+
+
     f2=storms_$year.csv
     tail -n +2 $f > $f2
     hdfs dfs -rm -r /w205/data/final_project/$year/storms_$year/
