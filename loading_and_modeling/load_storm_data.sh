@@ -46,6 +46,10 @@ do
       echo "Error in matching $f"
   fi
 done
+hdfs dfs -rm -r /user/w205/data/final_project/storms_alltime_clean_aggregate/
+hdfs dfs -mkdir -p /user/w205/data/final_project/storms_alltime_clean_aggregate/
+hdfs dfs -put storms_alltime_clean_aggregate.csv /user/w205/data/final_project/storms_alltime_clean_aggregate/
+
 
 echo "List of HDFS files"
 hdfs dfs -ls -R /user/w205/data/final_project
