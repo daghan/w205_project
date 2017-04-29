@@ -33,5 +33,8 @@ hive -f transform_tables_2015.sql
 echo "hive -f transform_tables_2016.sql"
 hive -f transform_tables_2016.sql
 
+echo "workaround for the old hive version"
+hive -f all_time_aggregage.sql
+
 echo "hive -f merge_tables.sql"
 hive -f merge_tables.sql

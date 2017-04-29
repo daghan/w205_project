@@ -1,3 +1,32 @@
+-- DROP TABLE storms_alltime_clean;
+-- CREATE TABLE storms_alltime_clean AS
+-- SELECT * FROM (
+--     SELECT * FROM storms_2006_clean
+--     UNION ALL
+--     SELECT * FROM storms_2007_clean
+--     UNION ALL
+--     SELECT * FROM storms_2008_clean
+--     UNION ALL
+--     SELECT * FROM storms_2009_clean
+--     UNION ALL
+--     SELECT * FROM storms_2010_clean
+--     UNION ALL
+--     SELECT * FROM storms_2011_clean
+--     UNION ALL
+--     SELECT * FROM storms_2012_clean
+--     UNION ALL
+--     SELECT * FROM storms_2013_clean
+--     UNION ALL
+--     SELECT * FROM storms_2013_clean
+--     UNION ALL
+--     SELECT * FROM storms_2014_clean
+--     UNION ALL
+--     SELECT * FROM storms_2015_clean
+--     UNION ALL
+--     SELECT * FROM storms_2016_clean
+-- ) tmp;
+
+
 DROP TABLE storms_alltime_clean_aggregate;
 CREATE TABLE storms_alltime_clean_aggregate AS
 SELECT * FROM (
