@@ -1,12 +1,6 @@
 #!/bin/bash
 
-#FILES="StormEvents_details-ftp_v1.0_d2006_c20170405.csv
-#StormEvents_details-ftp_v1.0_d2007_c20160223.csv
-#StormEvents_details-ftp_v1.0_d2008_c20160223.csv
-#StormEvents_details-ftp_v1.0_d2009_c20160223.csv
-#StormEvents_details-ftp_v1.0_d2010_c20160223.csv
-#StormEvents_details-ftp_v1.0_d2011_c20160223.csv
-#StormEvents_details-ftp_v1.0_d2012_c20160223.csv
+
 
 
 
@@ -15,7 +9,14 @@ MY_CWD=$(pwd)
 
 cd ../data/
 
-FILES="StormEvents_details-ftp_v1.0_d2013_c20160223.csv
+FILES="StormEvents_details-ftp_v1.0_d2006_c20170405.csv
+StormEvents_details-ftp_v1.0_d2007_c20160223.csv
+StormEvents_details-ftp_v1.0_d2008_c20160223.csv
+StormEvents_details-ftp_v1.0_d2009_c20160223.csv
+StormEvents_details-ftp_v1.0_d2010_c20160223.csv
+StormEvents_details-ftp_v1.0_d2011_c20160223.csv
+StormEvents_details-ftp_v1.0_d2012_c20160223.csv
+StormEvents_details-ftp_v1.0_d2013_c20160223.csv
 StormEvents_details-ftp_v1.0_d2014_c20161118.csv
 StormEvents_details-ftp_v1.0_d2015_c20170216.csv
 StormEvents_details-ftp_v1.0_d2016_c20170317.csv"

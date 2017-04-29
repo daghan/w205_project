@@ -1,5 +1,5 @@
-DROP TABLE storms_2012;
-CREATE EXTERNAL TABLE IF NOT EXISTS storms_2012
+DROP TABLE storms_2008;
+CREATE EXTERNAL TABLE IF NOT EXISTS storms_2008
 (
   begin_yearmonth STRING,
   begin_day STRING,
@@ -62,10 +62,10 @@ CREATE EXTERNAL TABLE IF NOT EXISTS storms_2012
     "escapeChar" = '\\'
 )
   STORED AS TEXTFILE
-  LOCATION '/w205/data/final_project/2012/storms_2012';
+  LOCATION '/w205/data/final_project/2008/storms_2008';
 
-DROP TABLE all_states_2012;
-CREATE EXTERNAL TABLE IF NOT EXISTS all_states_2012
+DROP TABLE all_states_2008;
+CREATE EXTERNAL TABLE IF NOT EXISTS all_states_2008
 (
   area_fips STRING,
 	own_code	INT,
@@ -124,7 +124,7 @@ WITH SERDEPROPERTIES
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/w205/data/final_project/2012/all_states_2012';
+LOCATION '/w205/data/final_project/2008/all_states_2008';
 
-select * from storms_2012 limit 5;
-select * from all_states_2012 limit 5;
+select * from storms_2008 limit 5;
+select * from all_states_2008 limit 5;

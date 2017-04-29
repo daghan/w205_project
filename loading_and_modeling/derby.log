@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Wed Mar 22 17:49:27 CET 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015a-f6ec-5261-000006509800 
-on database directory /private/var/folders/22/5d30z52101l8kx49j3dg5_x40000gp/T/spark-f88534c1-0741-47f8-bf8e-6226505e9cf0/metastore with class loader sun.misc.Launcher$AppClassLoader@6aa8ceb6 
+Fri Mar 31 15:39:54 PDT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015b-2686-68b9-0000061a84a8 
+on database directory /private/var/folders/22/5d30z52101l8kx49j3dg5_x40000gp/T/spark-ac56618d-5265-4bbc-9e24-b5f10d9023df/metastore with class loader sun.misc.Launcher$AppClassLoader@6aa8ceb6 
 Loaded from file:/usr/local/manual/spark-2.1.0-bin-hadoop2.7/jars/derby-10.12.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_121-b13
-user.dir=/Users/daghan/Dropbox/personal/Hacking/Berkeley/W205/w205-project/loading_and_modeling
+user.dir=/Users/daghan/Dropbox/personal/Hacking/Berkeley/W205/w205_project/loading_and_modeling
 os.name=Mac OS X
 os.arch=x86_64
 os.version=10.12.3
